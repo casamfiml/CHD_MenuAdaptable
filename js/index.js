@@ -16,7 +16,8 @@ var services_data = [
 { name: "Base de datos", icon: "base de datos " },
 { name: "Proyectos", icon: "proyectos" },
 { name: "Metodologia", icon: "Metodologia" },
-{ name: "Redes", icon: "Redes" }
+{ name: "Redes", icon: "Redes" },
+{ name: "Integracion", icon:"Integracion"}
 ];
 
 var services = document.getElementById("service-collection");
@@ -227,6 +228,57 @@ function serviceClick(ev) {
     symbol_copy.setAttribute("viewBox", "0 " + viewBoxY + " 300 300");
     jQuery(use_copy).removeClass("changing");
   }, 250);
+  if(count === 1)
+  {
+	jQuery(use_copy).addClass("celeste");
+	jQuery(use_copy).removeClass("verde");
+	jQuery(use_copy).removeClass("amarillo");
+	jQuery(use_copy).removeClass("rojo");
+	jQuery(use_copy).removeClass("purpura");
+	jQuery(use_copy).removeClass("fucsia");
+  } else if(count === 2)
+  {
+	  jQuery(use_copy).addClass("verde");
+	  jQuery(use_copy).removeClass("amarillo");
+	  jQuery(use_copy).removeClass("rojo");
+	  jQuery(use_copy).removeClass("celeste");
+	  jQuery(use_copy).removeClass("purpura");
+	  jQuery(use_copy).removeClass("fucsia");
+  } else if(count === 3)
+  {
+	  jQuery(use_copy).addClass("amarillo");
+	  jQuery(use_copy).removeClass("verde");
+	  jQuery(use_copy).removeClass("rojo");
+	  jQuery(use_copy).removeClass("celeste");
+	  jQuery(use_copy).removeClass("purpura");
+	  jQuery(use_copy).removeClass("fucsia");
+  } else if(count===4)
+  {
+	jQuery(use_copy).addClass("purpura");
+	jQuery(use_copy).removeClass("verde");
+	jQuery(use_copy).removeClass("rojo");
+	jQuery(use_copy).removeClass("celeste");
+	jQuery(use_copy).removeClass("amarillo");
+	jQuery(use_copy).removeClass("fucsia");
+  } else if(count===5)
+  {
+	jQuery(use_copy).addClass("fucsia");
+	jQuery(use_copy).removeClass("purpura");
+	jQuery(use_copy).removeClass("verde");
+	jQuery(use_copy).removeClass("rojo");
+	jQuery(use_copy).removeClass("celeste");
+	jQuery(use_copy).removeClass("amarillo");
+  }
+  else
+  {
+	  jQuery(use_copy).addClass("rojo");
+	  jQuery(use_copy).removeClass("verde");
+	  jQuery(use_copy).removeClass("amarillo");
+	  jQuery(use_copy).removeClass("celeste");
+	  jQuery(use_copy).removeClass("purpura");
+	  jQuery(use_copy).removeClass("fucsia");
+	  count = 0;
+  };
 }
 
 //Array describes points for a whole circle in order to get
